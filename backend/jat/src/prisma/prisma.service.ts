@@ -8,8 +8,7 @@ export class PrismaService
   extends PrismaClient
   implements OnModuleInit, OnModuleDestroy
 {
-  constructor(config: ConfigService) 
-  {
+  constructor(config: ConfigService) {
     super({
       adapter: new PrismaPg({
         connectionString: config.getOrThrow<string>('DATABASE_URL'),
@@ -17,11 +16,11 @@ export class PrismaService
     });
   }
 
-  async onModuleInit() {
+  async onModuleInit(): Promise<void> {
     await this.$connect();
   }
 
-  async onModuleDestroy() {
+  async onModuleDestroy(): Promise<void> {
     await this.$disconnect();
   }
 }
