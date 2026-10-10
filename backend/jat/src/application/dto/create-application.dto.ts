@@ -59,6 +59,17 @@ export class CreateApplicationDto
     @MaxLength(50_000)
     applyMail?: string | null;
 
+    @ApiPropertyOptional({
+        type: String,
+        nullable: true,
+        description: 'Link to the CV used for this application',
+        example: 'https://drive.google.com/file/d/abc123/view',
+    })
+    @IsOptional()
+    @IsUrl({ require_protocol: true })
+    @MaxLength(2048)
+    cvLink?: string | null;
+
     @ApiPropertyOptional({ type: Number, nullable: true, example: 80000 })
     @IsOptional()
     @IsInt()

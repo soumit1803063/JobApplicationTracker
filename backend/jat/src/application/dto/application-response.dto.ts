@@ -30,6 +30,9 @@ export class ApplicationResponseDto implements JobApplication
     @ApiProperty({ type: String, nullable: true })
     applyMail: string | null;
 
+    @ApiProperty({ type: String, nullable: true })
+    cvLink: string | null;
+
     @ApiProperty({ type: Number, nullable: true })
     salaryMin: number | null;
 

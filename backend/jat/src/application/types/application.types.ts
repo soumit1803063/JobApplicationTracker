@@ -11,6 +11,7 @@ export interface JobApplication
     applyMedium: ApplyMedium;
     applyLink: string | null;
     applyMail: string | null;
+    cvLink: string | null;
     salaryMin: number | null;
     salaryMax: number | null;
     salaryCurrency: string | null;
