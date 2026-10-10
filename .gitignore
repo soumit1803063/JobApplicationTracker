@@ -18,6 +18,8 @@ backend/dist/
 backend/build/
 backend/.nest/
 backend/*.tsbuildinfo
+backend/src/generated
+
 
 # ---------- Next.js frontend ----------
 frontend/.next/
