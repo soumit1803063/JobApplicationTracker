@@ -38,6 +38,7 @@ model Application {
   applyMedium ApplyMedium @map("apply_medium")
   applyLink   String?     @map("apply_link")
   applyMail   String?     @map("apply_mail") @db.Text
+  cvLink      String?     @map("cv_link")
 
   salaryMin      Int?    @map("salary_min")
   salaryMax      Int?    @map("salary_max")
