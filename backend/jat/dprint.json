@@ -1,0 +1,36 @@
+{
+    "$schema": "https://dprint.dev/schemas/v0.json",
+    "indentWidth": 4,
+    "lineWidth": 120,
+    "useTabs": false,
+    "newLineKind": "lf",
+    "typescript": {
+        "quoteStyle": "preferSingle",
+        "semiColons": "always",
+        "trailingCommas": "onlyMultiLine",
+        "bracePosition": "nextLine",
+        "nextControlFlowPosition": "nextLine",
+        "operatorPosition": "nextLine",
+        "arrowFunction.useParentheses": "force",
+        "module.sortImportDeclarations": "caseInsensitive",
+        "importDeclaration.sortNamedImports": "caseInsensitive",
+        "constructor.spaceBeforeParentheses": false
+    },
+    "json": {},
+    "markdown": {},
+    "yaml": {},
+    "includes": ["**/*.{ts,json,md,yml,yaml}"],
+    "excludes": [
+        "**/node_modules",
+        "**/dist",
+        "src/generated",
+        "coverage",
+        "package-lock.json"
+    ],
+    "plugins": [
+        "npm:@dprint/typescript@0.96.1",
+        "npm:@dprint/json@0.25.2",
+        "npm:@dprint/markdown@0.26.0",
+        "npm:dprint-plugin-yaml@0.6.0"
+    ]
+}
