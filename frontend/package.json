@@ -15,9 +15,13 @@
     "dependencies": {
         "@reduxjs/toolkit": "^2.13.0",
         "@tailwindcss/vite": "^4.3.3",
+        "@tiptap/pm": "^3.31.4",
+        "@tiptap/react": "^3.31.4",
+        "@tiptap/starter-kit": "^3.31.4",
         "react": "^19.2.8",
         "react-dom": "^19.2.8",
         "react-redux": "^9.3.0",
+        "react-router": "^8.4.0",
         "tailwindcss": "^4.3.3"
     },
     "devDependencies": {

@@ -30,6 +30,7 @@ export default defineConfig([
             '@typescript-eslint/consistent-type-imports': 'error',
             '@typescript-eslint/switch-exhaustiveness-check': 'error',
             '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
+            '@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: true }],
         },
     },
 ]);
