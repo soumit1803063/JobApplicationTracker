@@ -1,5 +1,5 @@
-import { API_BASE_URL } from '../constants/api-endpoints';
-import type { ApiEndpoints } from '../constants/api-endpoints';
+import { API_BASE_URL } from '@/shared/constants/api-endpoints';
+import type { ApiEndpoints } from '@/shared/constants/api-endpoints';
 
 export function apiUrl(endpoint: ApiEndpoints, params: Record<string, string> = {}): string
 {

@@ -1,6 +1,6 @@
-import { createAppAsyncThunk } from '../../../app/thunk';
-import { getHealth } from '../api/health.api';
-import type { HealthStatus } from '../types/health.types';
+import { createAppAsyncThunk } from '@/app/thunk';
+import { getHealth } from '@/features/health/api/health.api';
+import type { HealthStatus } from '@/features/health/types/health.types';
 
 export const fetchHealth = createAppAsyncThunk<HealthStatus, undefined>(
     'health/fetch',

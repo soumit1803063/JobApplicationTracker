@@ -1,7 +1,7 @@
-import { ApiEndpoints } from '../../../shared/constants/api-endpoints';
-import { apiUrl } from '../../../shared/helpers/api-url.helper';
-import type { ApiResponse } from '../../../shared/types/api-response.types';
-import type { HealthStatus } from '../types/health.types';
+import type { HealthStatus } from '@/features/health/types/health.types';
+import { ApiEndpoints } from '@/shared/constants/api-endpoints';
+import { apiUrl } from '@/shared/helpers/api-url.helper';
+import type { ApiResponse } from '@/shared/types/api-response.types';
 
 export async function getHealth(): Promise<HealthStatus>
 {

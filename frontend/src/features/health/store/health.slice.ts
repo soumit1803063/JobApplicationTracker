@@ -1,8 +1,8 @@
+import { fetchHealth } from '@/features/health/store/health.thunks';
+import type { HealthState } from '@/features/health/types/health.types';
+import { RequestStatus } from '@/shared/types/request-status.types';
 import { createSlice } from '@reduxjs/toolkit';
 import type { Reducer } from '@reduxjs/toolkit';
-import { RequestStatus } from '../../../shared/types/request-status.types';
-import type { HealthState } from '../types/health.types';
-import { fetchHealth } from './health.thunks';
 
 const initialState: HealthState = {
     data: null,

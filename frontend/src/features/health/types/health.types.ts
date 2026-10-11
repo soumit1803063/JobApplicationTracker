@@ -1,4 +1,4 @@
-import type { RequestStatus } from '../../../shared/types/request-status.types';
+import type { RequestStatus } from '@/shared/types/request-status.types';
 
 export interface HealthStatus
 {

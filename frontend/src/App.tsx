@@ -1,9 +1,9 @@
+import { useAppDispatch, useAppSelector } from '@/app/hooks';
+import { fetchHealth } from '@/features/health/store/health.thunks';
+import type { HealthState } from '@/features/health/types/health.types';
+import { RequestStatus } from '@/shared/types/request-status.types';
 import { useEffect } from 'react';
 import type React from 'react';
-import { useAppDispatch, useAppSelector } from './app/hooks';
-import { fetchHealth } from './features/health/store/health.thunks';
-import type { HealthState } from './features/health/types/health.types';
-import { RequestStatus } from './shared/types/request-status.types';
 
 function statusText({ data, status, error }: HealthState): string
 {

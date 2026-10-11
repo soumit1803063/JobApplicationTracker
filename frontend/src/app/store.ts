@@ -1,5 +1,5 @@
+import { healthReducer } from '@/features/health/store/health.slice';
 import { configureStore } from '@reduxjs/toolkit';
-import { healthReducer } from '../features/health/store/health.slice';
 
 export const store = configureStore({
     reducer: {
