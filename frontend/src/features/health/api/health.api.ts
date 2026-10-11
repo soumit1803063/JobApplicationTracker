@@ -1,16 +1,8 @@
 import type { HealthStatus } from '@/features/health/types/health.types';
+import { httpClient } from '@/shared/api/http-client';
 import { ApiEndpoints } from '@/shared/constants/api-endpoints';
-import { apiUrl } from '@/shared/helpers/api-url.helper';
-import type { ApiResponse } from '@/shared/types/api-response.types';
 
-export async function getHealth(): Promise<HealthStatus>
+export function getHealth(): Promise<HealthStatus>
 {
-    const response = await fetch(apiUrl(ApiEndpoints.Health));
-    const body = (await response.json()) as ApiResponse<HealthStatus>;
-
-    if (!body.success)
-    {
-        throw new Error(body.error.message);
-    }
-    return body.data;
+    return httpClient.get<HealthStatus>(ApiEndpoints.Health);
 }

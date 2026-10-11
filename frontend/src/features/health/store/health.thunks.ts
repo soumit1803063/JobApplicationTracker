@@ -1,6 +1,7 @@
 import { createAppAsyncThunk } from '@/app/thunk';
 import { getHealth } from '@/features/health/api/health.api';
 import type { HealthStatus } from '@/features/health/types/health.types';
+import { getErrorMessage } from '@/shared/helpers/error.helper';
 
 export const fetchHealth = createAppAsyncThunk<HealthStatus, undefined>(
     'health/fetch',
@@ -12,7 +13,7 @@ export const fetchHealth = createAppAsyncThunk<HealthStatus, undefined>(
         }
         catch (error: unknown)
         {
-            return rejectWithValue(error instanceof Error ? error.message : 'API unreachable');
+            return rejectWithValue(getErrorMessage(error));
         }
     },
 );
